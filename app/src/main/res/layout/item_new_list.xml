@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="result"
+            type="com.mytask.app.data.models.Result" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_image"
+            imageUrl="@{result.getImage()}"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:layout_margin="@dimen/x16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x16"
+            android:layout_marginEnd="@dimen/x16"
+            android:text="@{result.title}"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/s16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toTopOf="@id/iv_image" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x16"
+            android:layout_marginTop="@dimen/x4"
+            android:layout_marginEnd="@dimen/x16"
+            android:text="@{result.publishedDate}"
+            android:textColor="@color/sub_title_color"
+            android:textSize="@dimen/s12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

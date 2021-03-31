@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Task</string>
+    <string name="api_key" translatable="false">nRl7I0dAj0ahppaET5hmvtt924qtLuS9</string>
+    <string name="news_detail">News Details</string>
+</resources>
